@@ -9,8 +9,8 @@
 #include <thread>
 #include "snake_game.h"
 
-const int SERVER_PORT = 10000;
-const int NOTIFICATION_PORT = 10001;
+const int SERVER_PORT = 5000;
+const int NOTIFICATION_PORT = 5001;
 const char* SERVER_ADDRESS = "127.0.0.1";
 const int EULA_LEN = 1024;
 
@@ -73,8 +73,8 @@ int main()
 	std::thread notificationThread(&notificationThread_Main, notificationSocket);
 	notificationThread.detach();
 	
-	printf("Welcome To Snake. Press any key to continue.\n");
-	getc(stdin);
+	printf("Welcome To Snake.\n"); // Press any key to continue.\n");
+	//getc(stdin);
 
 	printf("%s\n", &eula[0]);
 	printf("Press any key to accept and continue.\n");
