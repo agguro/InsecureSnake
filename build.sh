@@ -1,3 +1,5 @@
-clang -std=c++11 -c *.cpp
-ld -o snake -macosx_version_min 10.14.0 -allow_stack_execute -no_pie -lcurses -lstdc++ -lc++ -lSystem *.o
-#clang -Wl,-allow_stack_execute -Wl,-no_pie main.cpp -o main -lcurses
+# build with g++
+# libraries for ncurses and pthread must be installed.  pthread isn't a problem when gcc is installed
+# ncurses can be installed from apt repository : sudo apt install libncurses-dev
+
+g++ -o snake *.cpp -lcurses -lpthread
